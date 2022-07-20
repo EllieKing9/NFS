@@ -42,6 +42,7 @@ $sudo chmod 777 /mnt/out
 $sudo mount xxx.xxx.xxx.xxx:/mnt/[server_folder_name] /mnt/[client_folder_name]
 ```
 *windows to nfs client
+
 https://www.putty.org/ (PuTTY 다운로드)
 ```
 putty.exe 설치하면 pscp 지원으로 pscp 사용가능
