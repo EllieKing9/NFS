@@ -41,13 +41,15 @@ $sudo chown -R nobody:nogroup /mnt/[name]
 $sudo chmod 777 /mnt/out
 $sudo mount xxx.xxx.xxx.xxx:/mnt/[server_folder_name] /mnt/[client_folder_name]
 ```
-*windows to nfs client
+* windows to nfs client
 
 https://www.putty.org/ (PuTTY 다운로드)
 ```
 putty.exe 설치하면 pscp 지원으로 pscp 사용가능
 
 windows _ search _ cmd 실행
->pscp --version
->pscp c:\...\[file] root@xxx.xxx.xxx.xxx:/mnt/[name]
+pscp 설치 확인
+  >pscp --version
+파일 전송
+  >pscp c:\...\[file] root@xxx.xxx.xxx.xxx:/mnt/[name]
 ```
