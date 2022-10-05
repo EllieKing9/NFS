@@ -48,7 +48,19 @@ $sudo service networking restart
 $ifconfig
 $ifup eth0
 $ifdown eth0
-
+-----
+$nmcli dev status
+  $nmcli radio wifi
+  $nmcli radio wifi on
+$nmcli dev wifi list
+$sudo nmcli dev wifi connect "network-ssid"
+$sudo nmcli dev wifi connect "network-ssid" password "network-password"
+  $sudo nmcli --ask dev wifi connect "network-ssid"
+  $ping google.com
+$nmcli con show
+$nmcli con down ssid/uuid
+$nmcli con up ssid/uuid
+-----
 $sudo apt install nfs-common
 $sudo mkdir -p /mnt/[name]
 $sudo chown -R nobody:nogroup /mnt/[name]
