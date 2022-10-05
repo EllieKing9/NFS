@@ -1,6 +1,6 @@
 # Network File System
 
-* nfs server
+* nfs server (WSL)
 ```
 $sudo apt install nfs-kernel-server
   > $sudo apt update 선행
@@ -33,8 +33,22 @@ client에서 접속 실패시
     > $sudo exportfs -ra
       > /etc/exports 리스트를 가지고 NFS 공유리스트를 재갱신
 ```
-* nfs client
+* nfs client (Board)
 ```
+$sudo nano /etc/network/interface
+auto eth0
+iface eth0 inet static
+address 'xxx.xxx.xxx.xxx'
+netmask 'xxx.xxx.xxx.xxx'
+gateway 'xxx.xxx.xxx.xxx'
+
+alt + x > y > enter
+
+$sudo service networking restart
+$ifconfig
+$ifup eth0
+$ifdown eth0
+
 $sudo apt install nfs-common
 $sudo mkdir -p /mnt/[name]
 $sudo chown -R nobody:nogroup /mnt/[name]
